@@ -15,18 +15,20 @@ module.exports = {
   ],
 
   rules: {
-    curly: ['error', 'multi-or-nest', 'consistent'],
-    'func-names': 'off',
-    'global-require': 'off',
-    'no-param-reassign': 'off',
+    curly: [
+      'error',
+      // remove curly braces only if a block contains one single-line statement
+      'multi-or-nest',
+      // enforce all bodies of an `if`, `else if` and `else` chain to be with
+      // or without braces
+      'consistent'
+    ],
+
     'no-console': 'off',
-    'no-multi-assign': 'off',
-    'no-nested-ternary': 'off',
-    'no-plusplus': 'off',
-    'no-return-assign': 'off',
-    'no-underscore-dangle': 'off',
-    'no-unused-expressions': ['error', { allowShortCircuit: true }],
+    'no-nested-ternary': 'off', // useful in JSX
+    'no-param-reassign': 'off',
     'no-use-before-define': 'off',
+
     'prefer-destructuring': [
       'error',
       {
@@ -36,6 +38,7 @@ module.exports = {
       { enforceForRenamedProperties: false }
     ],
 
+    'global-require': 'off',
     'import/no-dynamic-require': 'off',
 
     'prettier/prettier': ['error', prettierConfig]
