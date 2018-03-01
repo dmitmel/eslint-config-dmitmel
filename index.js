@@ -60,14 +60,25 @@ const config = {
   }
 };
 
-if (moduleExists('eslint-plugin-import')) {
+if (moduleExists('eslint-plugin-import'))
   config.extends.push('airbnb-base/rules/imports');
-  config.rules['import/no-dynamic-require'] = 'off';
-}
 
-if (moduleExists('eslint-config-prettier'))
+if (moduleExists('eslint-plugin-react')) {
+  config.extends.push('airbnb/rules/react');
+  config.rules['react/forbid-prop-types'] = 'off';
+  config.rules['react/prop-types'] = ['error', { ignore: 'children' }];
+  config.rules['react/require-default-props'] = 'off';
+}
+if (moduleExists('eslint-plugin-jsx-a11y'))
+  config.extends.push('airbnb/rules/react-a11y');
+
+if (moduleExists('eslint-config-prettier')) {
   // turns off all rules that are unnecessary or might conflict with Prettier
   config.extends.push('prettier');
+
+  if (moduleExists('eslint-plugin-react'))
+    config.extends.push('prettier/react');
+}
 
 if (moduleExists('eslint-plugin-prettier')) {
   // runs Prettier as an ESLint rule
