@@ -9,30 +9,17 @@ function moduleExists(id) {
   }
 }
 
-const presets = [
-  'airbnb-base/rules/best-practices',
-  'airbnb-base/rules/errors',
-  'airbnb-base/rules/node',
-  'airbnb-base/rules/style',
-  'airbnb-base/rules/variables',
-  'airbnb-base/rules/es6'
-];
-if (moduleExists('eslint-plugin-import'))
-  presets.push('airbnb-base/rules/imports');
-if (moduleExists('eslint-config-prettier'))
-  // turns off all rules that are unnecessary or might conflict with Prettier
-  presets.push('prettier');
+const config = {
+  extends: [
+    'airbnb-base/rules/best-practices',
+    'airbnb-base/rules/errors',
+    'airbnb-base/rules/node',
+    'airbnb-base/rules/style',
+    'airbnb-base/rules/variables',
+    'airbnb-base/rules/es6'
+  ],
+  plugins: [],
 
-const plugins = [];
-if (moduleExists('eslint-plugin-prettier'))
-  // runs Prettier as an ESLint rule
-  plugins.push('prettier');
-
-module.exports = {
-  extends: presets,
-  plugins,
-
-  parser: moduleExists('babel-eslint') ? 'babel-eslint' : null,
   parserOptions: {
     ecmaVersion: 2017,
     sourceType: 'module',
@@ -60,6 +47,8 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-use-before-define': 'off',
 
+    'global-require': 'off',
+
     'prefer-destructuring': [
       'error',
       {
@@ -67,11 +56,25 @@ module.exports = {
         AssignmentExpression: { array: false, object: false }
       },
       { enforceForRenamedProperties: false }
-    ],
-
-    'global-require': 'off',
-    'import/no-dynamic-require': 'off',
-
-    'prettier/prettier': ['error', prettierConfig]
+    ]
   }
 };
+
+if (moduleExists('eslint-plugin-import')) {
+  config.extends.push('airbnb-base/rules/imports');
+  config.rules['import/no-dynamic-require'] = 'off';
+}
+
+if (moduleExists('eslint-config-prettier'))
+  // turns off all rules that are unnecessary or might conflict with Prettier
+  config.extends.push('prettier');
+
+if (moduleExists('eslint-plugin-prettier')) {
+  // runs Prettier as an ESLint rule
+  config.plugins.push('prettier');
+  config.rules['prettier/prettier'] = ['error', prettierConfig];
+}
+
+if (moduleExists('babel-eslint')) config.parser = 'babel-eslint';
+
+module.exports = config;
