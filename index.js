@@ -19,12 +19,14 @@ if (moduleExists('eslint-config-prettier'))
   // turns off all rules that are unnecessary or might conflict with Prettier
   presets.push('prettier');
 
+const plugins = [];
+if (moduleExists('eslint-plugin-prettier'))
+  // runs Prettier as an ESLint rule
+  plugins.push('prettier');
+
 module.exports = {
   extends: presets,
-  plugins: [
-    // runs Prettier as an ESLint rule
-    'prettier'
-  ],
+  plugins,
 
   parser: moduleExists('babel-eslint') ? 'babel-eslint' : null,
 

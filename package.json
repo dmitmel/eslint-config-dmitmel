@@ -16,19 +16,19 @@
   ],
   "dependencies": {
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-prettier": "^2.5.0",
-    "prettier": "^1.10.2"
+    "eslint-plugin-import": "^2.8.0"
   },
   "peerDependencies": {
     "eslint": ">=3"
   },
   "optionalDependencies": {
     "babel-eslint": "^8.2.2",
-    "eslint-config-prettier": "^2.9.0"
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.5.0"
   },
   "devDependencies": {
     "@types/node": "^9.4.0",
-    "eslint": "^4.18.1"
+    "eslint": "^4.18.1",
+    "prettier": "^1.11.1"
   }
 }
