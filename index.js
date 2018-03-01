@@ -15,16 +15,11 @@ module.exports = {
   ],
 
   rules: {
-    'arrow-parens': 'off',
-    'comma-dangle': ['error', 'never'],
     curly: ['error', 'multi-or-nest', 'consistent'],
     'func-names': 'off',
-    'function-paren-newline': 'off',
     'global-require': 'off',
-    'max-len': 'off',
     'no-param-reassign': 'off',
     'no-console': 'off',
-    'no-mixed-operators': 'off',
     'no-multi-assign': 'off',
     'no-nested-ternary': 'off',
     'no-plusplus': 'off',
@@ -32,7 +27,6 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'no-unused-expressions': ['error', { allowShortCircuit: true }],
     'no-use-before-define': 'off',
-    'object-curly-newline': 'off',
     'prefer-destructuring': [
       'error',
       {
