@@ -14,16 +14,18 @@
     "javascript",
     "styleguide"
   ],
-  "peerDependencies": {
-    "eslint": ">=3"
-  },
-  "devDependencies": {
-    "@types/node": "^9.4.0",
-    "eslint": "^4.18.1",
+  "dependencies": {
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.5.0",
     "prettier": "^1.10.2"
+  },
+  "peerDependencies": {
+    "eslint": ">=3"
+  },
+  "devDependencies": {
+    "@types/node": "^9.4.0",
+    "eslint": "^4.18.1"
   }
 }
