@@ -1,5 +1,7 @@
 const prettierConfig = require('./prettier.config');
 
+const { resolve } = require;
+
 function moduleExists(id) {
   try {
     require.resolve(id);
@@ -11,22 +13,11 @@ function moduleExists(id) {
 
 const config = {
   extends: [
-    'airbnb-base/rules/best-practices',
-    'airbnb-base/rules/errors',
-    'airbnb-base/rules/node',
-    'airbnb-base/rules/style',
-    'airbnb-base/rules/variables',
-    'airbnb-base/rules/es6'
-  ],
-  plugins: [],
-
-  parserOptions: {
-    ecmaVersion: 2017,
-    sourceType: 'module',
-    ecmaFeatures: {
-      experimentalObjectRestSpread: true
-    }
-  },
+    'eslint-config-airbnb-base',
+    'eslint-config-airbnb-base/rules/strict',
+    'eslint-config-prettier'
+  ].map(resolve),
+  plugins: ['prettier'],
 
   env: {
     commonjs: true
@@ -56,35 +47,28 @@ const config = {
         AssignmentExpression: { array: false, object: false }
       },
       { enforceForRenamedProperties: false }
-    ]
+    ],
+
+    'prettier/prettier': ['error', prettierConfig]
   }
 };
 
-if (moduleExists('eslint-plugin-import'))
-  config.extends.push('airbnb-base/rules/imports');
-
 if (moduleExists('eslint-plugin-react')) {
-  config.extends.push('airbnb/rules/react');
-  config.rules['react/forbid-prop-types'] = 'off';
-  config.rules['react/prop-types'] = ['error', { ignore: 'children' }];
-  config.rules['react/require-default-props'] = 'off';
+  config.extends = config.extends.concat(
+    ['eslint-config-airbnb/rules/react', 'eslint-config-prettier/react'].map(
+      resolve
+    )
+  );
+
+  Object.assign(config.rules, {
+    'react/forbid-prop-types': 'off',
+    'react/prop-types': ['error', { ignore: 'children' }],
+    'react/require-default-props': 'off'
+  });
 }
+
 if (moduleExists('eslint-plugin-jsx-a11y'))
-  config.extends.push('airbnb/rules/react-a11y');
-
-if (moduleExists('eslint-config-prettier')) {
-  // turns off all rules that are unnecessary or might conflict with Prettier
-  config.extends.push('prettier');
-
-  if (moduleExists('eslint-plugin-react'))
-    config.extends.push('prettier/react');
-}
-
-if (moduleExists('eslint-plugin-prettier')) {
-  // runs Prettier as an ESLint rule
-  config.plugins.push('prettier');
-  config.rules['prettier/prettier'] = ['error', prettierConfig];
-}
+  config.extends.push(resolve('eslint-config-airbnb/rules/react-a11y'));
 
 if (moduleExists('babel-eslint')) config.parser = 'babel-eslint';
 
