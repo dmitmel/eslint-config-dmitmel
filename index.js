@@ -1,12 +1,18 @@
 const prettierConfig = require('./prettier.config');
 
 module.exports = {
-  extends: ['airbnb-base', 'airbnb-base/rules/strict', 'prettier'],
-  plugins: ['prettier'],
-
-  env: {
-    commonjs: true
-  },
+  extends: [
+    // "A mostly reasonable approach to JavaScript"
+    'airbnb-base',
+    // disables `'use strict';` warnings
+    'airbnb-base/rules/strict',
+    // turns off all rules that are unnecessary or might conflict with Prettier
+    'prettier'
+  ],
+  plugins: [
+    // runs Prettier as an ESLint rule
+    'prettier'
+  ],
 
   rules: {
     'arrow-parens': 'off',
