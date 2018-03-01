@@ -10,11 +10,15 @@ function moduleExists(id) {
 }
 
 const presets = [
-  // "A mostly reasonable approach to JavaScript"
-  'airbnb-base',
-  // disables `'use strict';` warnings
-  'airbnb-base/rules/strict'
+  'airbnb-base/rules/best-practices',
+  'airbnb-base/rules/errors',
+  'airbnb-base/rules/node',
+  'airbnb-base/rules/style',
+  'airbnb-base/rules/variables',
+  'airbnb-base/rules/es6'
 ];
+if (moduleExists('eslint-plugin-import'))
+  presets.push('airbnb-base/rules/imports');
 if (moduleExists('eslint-config-prettier'))
   // turns off all rules that are unnecessary or might conflict with Prettier
   presets.push('prettier');
@@ -29,6 +33,17 @@ module.exports = {
   plugins,
 
   parser: moduleExists('babel-eslint') ? 'babel-eslint' : null,
+  parserOptions: {
+    ecmaVersion: 2017,
+    sourceType: 'module',
+    ecmaFeatures: {
+      experimentalObjectRestSpread: true
+    }
+  },
+
+  env: {
+    commonjs: true
+  },
 
   rules: {
     curly: [
