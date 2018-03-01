@@ -1,26 +1,32 @@
 const prettierConfig = require('./prettier.config');
 
-let parser;
-try {
-  require.resolve('babel-eslint');
-  parser = 'babel-eslint';
-} catch (e) {}
+function moduleExists(id) {
+  try {
+    require.resolve(id);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+const presets = [
+  // "A mostly reasonable approach to JavaScript"
+  'airbnb-base',
+  // disables `'use strict';` warnings
+  'airbnb-base/rules/strict'
+];
+if (moduleExists('eslint-config-prettier'))
+  // turns off all rules that are unnecessary or might conflict with Prettier
+  presets.push('prettier');
 
 module.exports = {
-  extends: [
-    // "A mostly reasonable approach to JavaScript"
-    'airbnb-base',
-    // disables `'use strict';` warnings
-    'airbnb-base/rules/strict',
-    // turns off all rules that are unnecessary or might conflict with Prettier
-    'prettier'
-  ],
+  extends: presets,
   plugins: [
     // runs Prettier as an ESLint rule
     'prettier'
   ],
 
-  parser,
+  parser: moduleExists('babel-eslint') ? 'babel-eslint' : null,
 
   rules: {
     curly: [
@@ -33,7 +39,6 @@ module.exports = {
     ],
 
     'no-console': 'off',
-    'no-empty': ['error', { allowEmptyCatch: true }],
     'no-nested-ternary': 'off', // useful in JSX
     'no-param-reassign': 'off',
     'no-use-before-define': 'off',
