@@ -1,0 +1,29 @@
+{
+  "name": "eslint-config-dmitmel",
+  "version": "0.1.0",
+  "description": "ESLint configuration for dmitmel's projects",
+  "repository": "https://github.com/dmitmel/eslint-config-dmitmel",
+  "bugs": "https://github.com/dmitmel/eslint-config-dmitmel/issues",
+  "author": "Dmytro Meleshko <dmytro.meleshko@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "dmitmel",
+    "javascript",
+    "styleguide"
+  ],
+  "peerDependencies": {
+    "eslint": ">=3"
+  },
+  "devDependencies": {
+    "@types/node": "^9.4.0",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-prettier": "^2.5.0",
+    "prettier": "^1.10.2"
+  }
+}
