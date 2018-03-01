@@ -1,5 +1,11 @@
 const prettierConfig = require('./prettier.config');
 
+let parser;
+try {
+  require.resolve('babel-eslint');
+  parser = 'babel-eslint';
+} catch (e) {}
+
 module.exports = {
   extends: [
     // "A mostly reasonable approach to JavaScript"
@@ -14,6 +20,8 @@ module.exports = {
     'prettier'
   ],
 
+  parser,
+
   rules: {
     curly: [
       'error',
@@ -25,6 +33,7 @@ module.exports = {
     ],
 
     'no-console': 'off',
+    'no-empty': ['error', { allowEmptyCatch: true }],
     'no-nested-ternary': 'off', // useful in JSX
     'no-param-reassign': 'off',
     'no-use-before-define': 'off',
