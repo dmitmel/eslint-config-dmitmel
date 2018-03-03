@@ -1,11 +1,7 @@
-const moduleExists = require('../moduleExists');
 const prettierConfig = require('../prettier.config');
 
 module.exports = {
-  extends: [
-    'prettier',
-    moduleExists('eslint-plugin-react') && 'prettier/react'
-  ].filter(Boolean),
+  extends: ['prettier'],
   plugins: ['prettier'],
 
   rules: {
