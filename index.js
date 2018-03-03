@@ -18,10 +18,6 @@ module.exports = {
 
   parser: moduleExists('babel-eslint') ? 'babel-eslint' : null,
 
-  env: {
-    commonjs: true
-  },
-
   rules: {
     curly: [
       'error',
