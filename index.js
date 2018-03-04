@@ -33,8 +33,6 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-use-before-define': 'off',
 
-    'global-require': 'off',
-
     'prefer-destructuring': [
       'error',
       {
