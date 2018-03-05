@@ -4,6 +4,7 @@
 
 # eslint-config-dmitmel
 
+[![npm](https://img.shields.io/npm/v/eslint-config-dmitmel.svg?style=flat-square)](https://npmjs.com/package/eslint-config-dmitmel)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 > ESLint configuration for my projects
