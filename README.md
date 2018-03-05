@@ -8,7 +8,16 @@
 
 > ESLint configuration for my projects
 
-## Installation
+## Features
+
+1.  Almost full compliance with the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+2.  Formatting using [Prettier](https://github.com/prettier/eslint-plugin-prettier) ([without conflicts with ESLint](https://github.com/prettier/eslint-config-prettier))
+3.  Auto-detection of optional dependencies
+    * [Babel parser](https://github.com/babel/babel-eslint)
+    * [React plugin](https://github.com/yannickcr/eslint-plugin-react)
+    * [React accessibility plugin](https://github.com/evcohen/eslint-plugin-jsx-a11y)
+
+## Install
 
 ```bash
 # for most projects
@@ -26,15 +35,6 @@ yarn add -D eslint-config-dmitmel babel-eslint eslint-plugin-react eslint-plugin
 extends: eslint-config-dmitmel
 # ...your overrides...
 ```
-
-## Features
-
-1.  Almost full compliance with the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
-2.  Formatting using [Prettier](https://github.com/prettier/eslint-plugin-prettier) ([without conflicts with ESLint](https://github.com/prettier/eslint-config-prettier))
-3.  Auto-detection of optional dependencies
-    * [Babel parser](https://github.com/babel/babel-eslint)
-    * [React plugin](https://github.com/yannickcr/eslint-plugin-react)
-    * [React accessibility plugin](https://github.com/evcohen/eslint-plugin-jsx-a11y)
 
 ## Contribute
 
