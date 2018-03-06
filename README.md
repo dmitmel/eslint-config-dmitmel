@@ -5,6 +5,7 @@
 # eslint-config-dmitmel
 
 [![npm](https://img.shields.io/npm/v/eslint-config-dmitmel.svg?style=flat-square)](https://npmjs.com/package/eslint-config-dmitmel)
+[![MIT License](https://img.shields.io/npm/l/eslint-config-dmitmel.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 > ESLint configuration for my projects
