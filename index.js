@@ -31,15 +31,6 @@ module.exports = {
     'no-console': 'off',
     'no-nested-ternary': 'off', // useful in JSX
     'no-param-reassign': 'off',
-    'no-use-before-define': 'off',
-
-    'prefer-destructuring': [
-      'error',
-      {
-        VariableDeclarator: { array: false, object: true },
-        AssignmentExpression: { array: false, object: false }
-      },
-      { enforceForRenamedProperties: false }
-    ]
+    'no-use-before-define': 'off'
   }
 };
