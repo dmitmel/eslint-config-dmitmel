@@ -30,7 +30,6 @@ module.exports = {
 
     'no-console': 'off',
     'no-nested-ternary': 'off', // useful in JSX
-    'no-param-reassign': 'off',
     'no-use-before-define': 'off'
   }
 };
