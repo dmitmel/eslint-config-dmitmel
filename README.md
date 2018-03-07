@@ -53,6 +53,10 @@ Although it's considered a best practice to avoid using `console` in browser Jav
 
 If the condition and branches are small, nested ternaries can be really handy.
 
+### `no-param-reassign`
+
+* `props: false`: You can't modify parameters, but you can modify their properties.
+
 ### `no-use-before-define: off`
 
 Code is harder to understand when the low-level functions go first.
