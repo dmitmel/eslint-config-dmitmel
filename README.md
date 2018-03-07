@@ -45,6 +45,10 @@ extends: eslint-config-dmitmel
 * `multi-or-nest`: Use braces with all blocks **that contain multi-line statements**.
 * `consistent`: All chained `if`, `else if` and `else` blocks must be either with or without braces.
 
+### `global-require: off`
+
+Disabled to allow optional imports.
+
 ### `no-console: off`
 
 Although it's considered a best practice to avoid using `console` in browser JavaScript, `console` is commonly used in Node.js.

@@ -21,6 +21,7 @@ module.exports = {
   rules: {
     curly: ['error', 'multi-or-nest', 'consistent'],
 
+    'global-require': 'off',
     'no-console': 'off',
     'no-nested-ternary': 'off',
     'no-param-reassign': ['off', { props: false }],
