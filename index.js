@@ -19,17 +19,10 @@ module.exports = {
   parser: moduleExists('babel-eslint') ? 'babel-eslint' : null,
 
   rules: {
-    curly: [
-      'error',
-      // remove curly braces only if a block contains one single-line statement
-      'multi-or-nest',
-      // enforce all bodies of an `if`, `else if` and `else` chain to be with
-      // or without braces
-      'consistent'
-    ],
+    curly: ['error', 'multi-or-nest', 'consistent'],
 
     'no-console': 'off',
-    'no-nested-ternary': 'off', // useful in JSX
+    'no-nested-ternary': 'off',
     'no-param-reassign': ['off', { props: false }],
     'no-use-before-define': 'off'
   }
