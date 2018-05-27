@@ -24,7 +24,7 @@ module.exports = {
     'global-require': 'off',
     'no-console': 'off',
     'no-nested-ternary': 'off',
-    'no-param-reassign': ['off', { props: false }],
+    'no-param-reassign': 'off',
     'no-use-before-define': 'off'
   }
 };

@@ -57,9 +57,9 @@ Although it's considered a best practice to avoid using `console` in browser Jav
 
 If the condition and branches are small, nested ternaries can be really handy.
 
-### `no-param-reassign`
+### `no-param-reassign: off`
 
-* `props: false`: You can't modify parameters, but you can modify their properties.
+See `no-param-reassign` section of [this article](https://blog.javascripting.com/2015/09/07/fine-tuning-airbnbs-eslint-config/).
 
 ### `no-use-before-define: off`
 
