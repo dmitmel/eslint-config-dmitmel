@@ -13,7 +13,7 @@ module.exports = {
     'airbnb-base/rules/strict',
     moduleExists('eslint-plugin-react') && './rules/react.js',
     moduleExists('eslint-plugin-jsx-a11y') && './rules/react-a11y.js',
-    './rules/prettier.js'
+    './rules/prettier.js',
   ].filter(Boolean),
 
   parser: moduleExists('babel-eslint') ? 'babel-eslint' : null,
@@ -25,6 +25,6 @@ module.exports = {
     'no-console': 'off',
     'no-nested-ternary': 'off',
     'no-param-reassign': 'off',
-    'no-use-before-define': 'off'
-  }
+    'no-use-before-define': 'off',
+  },
 };

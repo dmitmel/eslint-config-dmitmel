@@ -65,6 +65,10 @@ See `no-param-reassign` section of [this article](https://blog.javascripting.com
 
 Code is harder to understand when the low-level functions go first.
 
+## Why do you use trailing/dangling commas?
+
+See [this article](https://medium.com/@nikgraf/why-you-should-enforce-dangling-commas-for-multiline-statements-d034c98e36f8).
+
 ## Contribute
 
 PRs accepted.

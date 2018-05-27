@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['airbnb/rules/react-a11y']
+  extends: ['airbnb/rules/react-a11y'],
 };
