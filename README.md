@@ -1,5 +1,5 @@
 <a href="https://eslint.org/">
-  <img src="https://eslint.org/img/logo.svg" height="150" align="right">
+  <img src="https://eslint.org/assets/img/logo.svg" height="150" align="right">
 </a>
 
 # eslint-config-dmitmel
@@ -15,9 +15,9 @@
 1.  Almost full compliance with the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 2.  Formatting using [Prettier](https://github.com/prettier/eslint-plugin-prettier) ([without conflicts with ESLint](https://github.com/prettier/eslint-config-prettier))
 3.  Auto-detection of optional dependencies
-    * [Babel parser](https://github.com/babel/babel-eslint)
-    * [React plugin](https://github.com/yannickcr/eslint-plugin-react)
-    * [React accessibility plugin](https://github.com/evcohen/eslint-plugin-jsx-a11y)
+    - [Babel parser](https://github.com/babel/babel-eslint)
+    - [React plugin](https://github.com/yannickcr/eslint-plugin-react)
+    - [React accessibility plugin](https://github.com/evcohen/eslint-plugin-jsx-a11y)
 
 ## Install
 
@@ -42,8 +42,8 @@ extends: eslint-config-dmitmel
 
 ### `curly`
 
-* `multi-or-nest`: Use braces with all blocks **that contain multi-line statements**.
-* `consistent`: All chained `if`, `else if` and `else` blocks must be either with or without braces.
+- `multi-or-nest`: Use braces with all blocks **that contain multi-line statements**.
+- `consistent`: All chained `if`, `else if` and `else` blocks must be either with or without braces.
 
 ### `global-require: off`
 
