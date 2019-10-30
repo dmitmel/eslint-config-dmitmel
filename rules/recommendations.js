@@ -25,7 +25,7 @@ module.exports = {
       {
         vars: 'all',
         varsIgnorePattern: UNUSED_IGNORE_PATTERN,
-        args: 'after-used',
+        args: 'all',
         argsIgnorePattern: UNUSED_IGNORE_PATTERN,
         ignoreRestSiblings: true,
         caughtErrors: 'all',
