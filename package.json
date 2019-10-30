@@ -14,9 +14,11 @@
     "javascript",
     "styleguide"
   ],
+  "engines": {
+    "node": ">=8.10.0"
+  },
   "dependencies": {
     "eslint-config-prettier": "*",
-    "eslint-plugin-import": "*",
     "eslint-plugin-prettier": "*",
     "prettier": "*"
   },
@@ -24,7 +26,8 @@
     "eslint": ">=6.3"
   },
   "optionalDependencies": {
-    "babel-eslint": "*"
+    "babel-eslint": "*",
+    "eslint-plugin-node": "*"
   },
   "devDependencies": {
     "eslint": ">=6.3"

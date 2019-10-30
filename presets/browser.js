@@ -7,7 +7,6 @@ module.exports = {
 
   parserOptions: {
     ecmaVersion: 2016,
-    sourceType: 'script',
   },
 
   reportUnusedDisableDirectives: true,

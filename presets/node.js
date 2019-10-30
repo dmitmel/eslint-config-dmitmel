@@ -1,13 +1,12 @@
 module.exports = {
-  extends: ['./core'],
+  extends: ['./core', '../rules/node'],
 
   env: {
     node: true,
   },
 
   parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
+    ecmaVersion: 2019,
   },
 
   reportUnusedDisableDirectives: true,
