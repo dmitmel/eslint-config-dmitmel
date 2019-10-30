@@ -1,1 +1,1 @@
-extends: ./index.js
+extends: ./presets/node.js
