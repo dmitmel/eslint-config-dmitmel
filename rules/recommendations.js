@@ -118,12 +118,15 @@ module.exports = {
     // imports and exports {{{
 
     'no-duplicate-imports': ['warn'],
-    'sort-imports': ['warn', {
-      // don't sort whole `import` statements
-      ignoreDeclarationSort: true,
-      // sort imported identifiers inside curly braces
-      ignoreMemberSort: false,
-    }],
+    'sort-imports': [
+      'warn',
+      {
+        // don't sort whole `import` statements
+        ignoreDeclarationSort: true,
+        // sort imported identifiers inside curly braces
+        ignoreMemberSort: false,
+      },
+    ],
 
     // }}}
   },

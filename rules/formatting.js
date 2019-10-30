@@ -36,7 +36,7 @@ module.exports = {
 
     'quote-props':
       prettierConfig.quoteProps === 'as-needed' ||
-        prettierConfig.quoteProps === 'consistent'
+      prettierConfig.quoteProps === 'consistent'
         ? ['warn', prettierConfig.quoteProps]
         : ['off'],
     'jsx-quotes': [
@@ -49,20 +49,19 @@ module.exports = {
         ? ['warn', 'never']
         : prettierConfig.trailingComma === 'es5' ||
           prettierConfig.trailingComma === 'all'
-          ? ['warn', 'always-multiline']
-          : ['off'],
+        ? ['warn', 'always-multiline']
+        : ['off'],
 
     'object-curly-spacing': [
       'warn',
       prettierConfig.bracketSpacing ? 'always' : 'never',
-
     ],
     'arrow-parens':
       prettierConfig.arrowParens === 'avoid'
         ? ['warn', 'as-needed']
         : prettierConfig.arrowParens === 'always'
-          ? ['warn', 'always']
-          : ['off'],
+        ? ['warn', 'always']
+        : ['off'],
 
     'array-bracket-newline': ['warn', 'consistent'],
     'array-bracket-spacing': ['warn', 'never'],
@@ -94,11 +93,15 @@ module.exports = {
     'linebreak-style': ['warn', 'unix'],
     'multiline-ternary': ['warn', 'always-multiline'],
     'new-parens': ['error', 'always'],
-    'no-extra-parens': ['warn', 'all', {
-      nestedBinaryExpressions: false,
-      ignoreJSX: 'all',
-      enforceForArrowConditionals: false,
-    }],
+    'no-extra-parens': [
+      'warn',
+      'all',
+      {
+        nestedBinaryExpressions: false,
+        ignoreJSX: 'all',
+        enforceForArrowConditionals: false,
+      },
+    ],
     'no-extra-semi': ['warn'],
     'no-floating-decimal': ['warn'],
     'no-mixed-spaces-and-tabs': ['warn', 'smart-tabs'],
