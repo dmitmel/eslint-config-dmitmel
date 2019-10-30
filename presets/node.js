@@ -1,5 +1,5 @@
 module.exports = {
-  extends: [require.resolve('./core')],
+  extends: ['./core'],
 
   env: {
     node: true,

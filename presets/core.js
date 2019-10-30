@@ -8,15 +8,14 @@ function moduleExists(id) {
 }
 
 module.exports = {
-  extends: ['eslint:recommended'].concat(
-    [
-      'syntax-errors',
-      'type-errors',
-      'recommendations',
-      // 'formatting',
-      'prettier',
-    ].map(m => require.resolve(`../rules/${m}`)),
-  ),
+  extends: [
+    'eslint:recommended',
+    '../rules/syntax-errors',
+    '../rules/type-errors',
+    '../rules/recommendations',
+    // '../rules/formatting',
+    '../rules/prettier',
+  ],
 
   env: {
     es6: true,
