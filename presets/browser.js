@@ -8,6 +8,4 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2016,
   },
-
-  reportUnusedDisableDirectives: true,
 };
