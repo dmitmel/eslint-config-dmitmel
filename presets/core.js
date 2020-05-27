@@ -13,17 +13,15 @@ module.exports = {
     '../rules/syntax-errors',
     '../rules/type-errors',
     '../rules/recommendations',
-    // '../rules/formatting',
-    '../rules/prettier',
   ],
 
   env: {
-    es6: true,
+    es2017: true,
   },
 
   parser: moduleExists('babel-eslint') ? 'babel-eslint' : null,
   parserOptions: {
-    ecmaVersion: 2015,
+    ecmaVersion: 8,
   },
 
   reportUnusedDisableDirectives: true,
