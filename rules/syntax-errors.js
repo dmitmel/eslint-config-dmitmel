@@ -37,7 +37,10 @@ module.exports = {
 
     // why does `this` even exist outside of classes and objects???
     'no-invalid-this': ['error'],
+
     'constructor-super': ['error'],
+
+    'no-dupe-class-members': ['error'],
 
     // }}}
 
@@ -49,6 +52,8 @@ module.exports = {
     'consistent-return': ['error'],
 
     'require-await': ['error'],
+
+    'no-empty-function': ['off'],
 
     // }}}
 
@@ -63,6 +68,7 @@ module.exports = {
         variables: true,
       },
     ],
+    'init-declarations': ['off'], // come on. this isn't Pascal
     // use of the same identifier for two items is an error
     'no-shadow': ['error', { builtinGlobals: true }], // two variables
     'no-label-var': ['error'], // a variable and a label
@@ -74,7 +80,7 @@ module.exports = {
     // by common sense) and should not be used
 
     'no-var': ['error'],
-    'no-void': ['error'],
+    'no-void': ['error', { allowAsStatement: true }],
     'no-with': ['error'],
     'no-sequences': ['error'], // comma operator, as in `var a = (f(), b++);`
     'no-octal-escape': ['error'],

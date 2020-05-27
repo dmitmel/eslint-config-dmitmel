@@ -15,6 +15,8 @@ module.exports = {
     // constructors usually don't have side effects
     'no-new': ['warn'],
 
+    'no-magic-numbers': ['off'],
+
     // useless and unused code {{{
 
     'no-lone-blocks': ['warn'],
@@ -49,7 +51,8 @@ module.exports = {
     'prefer-numeric-literals': ['warn'],
 
     // `return await f()` is equivalent to `return f()`
-    'no-return-await': ['warn'],
+    // NOTE: not really. see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.md
+    'no-return-await': ['off'],
 
     // }}}
 

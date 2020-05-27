@@ -70,7 +70,7 @@ module.exports = {
     'brace-style': ['warn', '1tbs'],
     'comma-spacing': ['warn', { before: false, after: true }],
     'computed-property-spacing': [
-      'error',
+      'warn',
       'never',
       {
         enforceForClassMembers: true,
@@ -79,7 +79,7 @@ module.exports = {
     'dot-location': ['warn', 'property'],
     'eol-last': ['warn', 'always'],
     'func-call-spacing': ['warn', 'never'],
-    'function-call-argument-newline': ['error', 'consistent'],
+    'function-call-argument-newline': ['warn', 'consistent'],
     'function-paren-newline': ['warn', 'multiline-arguments'],
     'key-spacing': [
       'warn',
@@ -91,7 +91,10 @@ module.exports = {
     ],
     'keyword-spacing': ['warn', { before: true, after: true }],
     'linebreak-style': ['warn', 'unix'],
+    'lines-between-class-members': ['off'],
     'multiline-ternary': ['warn', 'always-multiline'],
+    // while this _technically_ is a syntax error IMO, it is handled by
+    // Prettier, therefore I didn't put this rule into `syntax-errors.js`
     'new-parens': ['error', 'always'],
     'no-extra-parens': [
       'warn',
@@ -127,10 +130,12 @@ module.exports = {
     'space-infix-ops': ['warn'],
     'space-unary-ops': ['warn', { words: true, nonwords: false }],
     'switch-colon-spacing': ['warn', { before: false, after: true }],
+    // same thing as with `new-parens`
     'template-tag-spacing': ['error', 'never'],
 
     'arrow-body-style': ['warn', 'as-needed'],
     'arrow-spacing': ['warn', { before: true, after: true }],
+    // again, "syntax error", see `new-parens`
     'generator-star-spacing': [
       'error',
       {
@@ -144,6 +149,7 @@ module.exports = {
     'rest-spread-spacing': ['warn', 'never'],
     'template-curly-spacing': ['warn', 'never'],
     'wrap-iife': ['warn', 'inside', { functionPrototypeMethods: true }],
+    // see `generator-star-spacing` and `new-parens`
     'yield-star-spacing': ['error', 'after'],
   },
 };
