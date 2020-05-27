@@ -17,19 +17,14 @@
   "engines": {
     "node": ">=8.10.0"
   },
-  "dependencies": {
-    "eslint-config-prettier": "*",
-    "eslint-plugin-prettier": "*",
-    "prettier": "*"
-  },
   "peerDependencies": {
     "eslint": ">=6.3"
   },
-  "optionalDependencies": {
-    "babel-eslint": "*",
-    "eslint-plugin-node": "*"
-  },
   "devDependencies": {
-    "eslint": ">=6.3"
+    "eslint": ">=6.3",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-node": "*",
+    "eslint-plugin-prettier": "*",
+    "prettier": "*"
   }
 }

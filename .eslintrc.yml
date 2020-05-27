@@ -1,1 +1,3 @@
-extends: ./presets/node.js
+extends:
+  - ./presets/node.js
+  - ./presets/formatting.js
