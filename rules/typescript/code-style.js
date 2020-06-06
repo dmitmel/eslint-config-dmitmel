@@ -43,7 +43,10 @@ module.exports = {
 
     '@typescript-eslint/member-ordering': ['off'],
 
-    '@typescript-eslint/explicit-member-accessibility': ['off'], // TODO perhaps enable?
+    '@typescript-eslint/explicit-member-accessibility': [
+      'warn',
+      { accessibility: 'explicit' },
+    ],
 
     // }}}
   },
