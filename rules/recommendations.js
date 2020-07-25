@@ -73,7 +73,7 @@ module.exports = {
 
     'for-direction': ['warn'],
 
-    'no-await-in-loop': ['warn'],
+    'no-await-in-loop': ['off'],
 
     // }}}
 
@@ -101,7 +101,10 @@ module.exports = {
     'object-shorthand': ['warn', 'always'],
     'prefer-destructuring': [
       'warn',
-      { object: true, array: false },
+      {
+        VariableDeclarator: { array: false, object: true },
+        AssignmentExpression: { array: false, object: false },
+      },
       { enforceForRenamedProperties: false },
     ],
     'no-empty-pattern': ['warn'],

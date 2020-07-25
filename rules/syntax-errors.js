@@ -20,9 +20,7 @@ module.exports = {
     // treated as a syntax error
     'no-fallthrough': ['error'],
 
-    // NOTE: this rule might change in the future, I'm looking for valid
-    // use-cases of `require()` in a local scope
-    'global-require': ['error'],
+    'global-require': ['off'],
 
     // undefined {{{
 
@@ -51,7 +49,8 @@ module.exports = {
 
     'consistent-return': ['error'],
 
-    'require-await': ['error'],
+    'require-await': ['warn'],
+    'require-yield': ['warn'],
 
     'no-empty-function': ['off'],
 
@@ -70,7 +69,8 @@ module.exports = {
     ],
     'init-declarations': ['off'], // come on. this isn't Pascal
     // use of the same identifier for two items is an error
-    'no-shadow': ['error', { builtinGlobals: true }], // two variables
+    // 'no-shadow': ['error', { builtinGlobals: true }], // two variables
+    'no-shadow': ['off'], // turns out this rule is more annoying than helpful
     'no-label-var': ['error'], // a variable and a label
 
     // }}}

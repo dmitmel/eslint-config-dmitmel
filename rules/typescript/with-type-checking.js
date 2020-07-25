@@ -39,7 +39,10 @@ module.exports = {
 
     '@typescript-eslint/prefer-string-starts-ends-with': ['warn'],
 
-    '@typescript-eslint/require-array-sort-compare': ['error'],
+    '@typescript-eslint/require-array-sort-compare': [
+      'error',
+      { ignoreStringArrays: true },
+    ],
 
     // }}}
 
@@ -77,10 +80,10 @@ module.exports = {
 
     '@typescript-eslint/no-unnecessary-type-assertion': ['warn'],
 
-    '@typescript-eslint/no-unsafe-assignment': ['error'],
-    '@typescript-eslint/no-unsafe-call': ['error'],
-    '@typescript-eslint/no-unsafe-member-access': ['error'],
-    '@typescript-eslint/no-unsafe-return': ['error'],
+    '@typescript-eslint/no-unsafe-assignment': ['off'],
+    '@typescript-eslint/no-unsafe-call': ['off'],
+    '@typescript-eslint/no-unsafe-member-access': ['off'],
+    '@typescript-eslint/no-unsafe-return': ['off'],
 
     '@typescript-eslint/prefer-nullish-coalescing': ['off'],
 
