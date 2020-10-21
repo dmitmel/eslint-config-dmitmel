@@ -60,6 +60,9 @@ module.exports = {
     '@typescript-eslint/space-before-function-paren':
       rulesJS['space-before-function-paren'],
 
+    'comma-dangle': ['off'],
+    '@typescript-eslint/comma-dangle': rulesJS['comma-dangle'],
+
     // }}}
   },
 };

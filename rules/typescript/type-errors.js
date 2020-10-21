@@ -36,5 +36,12 @@ module.exports = {
 
     'no-array-constructor': ['off'],
     '@typescript-eslint/no-array-constructor': rulesJS['no-array-constructor'],
+
+    // enhanced versions of the built-in rules {{{
+
+    'no-loop-func': ['off'],
+    '@typescript-eslint/no-loop-func': rulesJS['no-loop-func'],
+
+    // }}}
   },
 };
