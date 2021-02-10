@@ -6,11 +6,7 @@ module.exports = {
   rules: {
     curly: ['warn', 'multi-line', 'consistent'],
 
-    indent: [
-      'warn',
-      prettierConfig.useTabs ? 'tab' : prettierConfig.tabWidth,
-      { SwitchCase: 1 },
-    ],
+    indent: ['warn', prettierConfig.useTabs ? 'tab' : prettierConfig.tabWidth, { SwitchCase: 1 }],
     'no-tabs': ['warn', { allowIndentationTabs: prettierConfig.useTabs }],
 
     quotes: [
@@ -35,27 +31,19 @@ module.exports = {
     ],
 
     'quote-props':
-      prettierConfig.quoteProps === 'as-needed' ||
-      prettierConfig.quoteProps === 'consistent'
+      prettierConfig.quoteProps === 'as-needed' || prettierConfig.quoteProps === 'consistent'
         ? ['warn', prettierConfig.quoteProps]
         : ['off'],
-    'jsx-quotes': [
-      'warn',
-      prettierConfig.jsxSingleQuote ? 'prefer-single' : 'prefer-double',
-    ],
+    'jsx-quotes': ['warn', prettierConfig.jsxSingleQuote ? 'prefer-single' : 'prefer-double'],
 
     'comma-dangle':
       prettierConfig.trailingComma === 'none'
         ? ['warn', 'never']
-        : prettierConfig.trailingComma === 'es5' ||
-          prettierConfig.trailingComma === 'all'
+        : prettierConfig.trailingComma === 'es5' || prettierConfig.trailingComma === 'all'
         ? ['warn', 'always-multiline']
         : ['off'],
 
-    'object-curly-spacing': [
-      'warn',
-      prettierConfig.bracketSpacing ? 'always' : 'never',
-    ],
+    'object-curly-spacing': ['warn', prettierConfig.bracketSpacing ? 'always' : 'never'],
     'arrow-parens':
       prettierConfig.arrowParens === 'avoid'
         ? ['warn', 'as-needed']

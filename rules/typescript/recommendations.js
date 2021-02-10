@@ -25,10 +25,7 @@ module.exports = {
 
     // types {{{
 
-    '@typescript-eslint/no-empty-interface': [
-      'warn',
-      { allowSingleExtends: true },
-    ],
+    '@typescript-eslint/no-empty-interface': ['warn', { allowSingleExtends: true }],
 
     '@typescript-eslint/no-inferrable-types': ['warn'],
 
@@ -46,8 +43,7 @@ module.exports = {
     '@typescript-eslint/no-magic-numbers': rulesJS['no-magic-numbers'],
 
     'no-unused-expressions': ['off'],
-    '@typescript-eslint/no-unused-expressions':
-      rulesJS['no-unused-expressions'],
+    '@typescript-eslint/no-unused-expressions': rulesJS['no-unused-expressions'],
 
     'no-unused-vars': ['off'],
     // see https://github.com/typescript-eslint/typescript-eslint/issues/1856
@@ -56,8 +52,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars-experimental': ['off'],
 
     'no-useless-constructor': ['off'],
-    '@typescript-eslint/no-useless-constructor':
-      rulesJS['no-useless-constructor'],
+    '@typescript-eslint/no-useless-constructor': rulesJS['no-useless-constructor'],
 
     // }}}
   },

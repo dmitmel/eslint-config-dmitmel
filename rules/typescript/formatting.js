@@ -41,8 +41,7 @@ module.exports = {
     '@typescript-eslint/keyword-spacing': rulesJS['keyword-spacing'],
 
     'lines-between-class-members': ['off'],
-    '@typescript-eslint/lines-between-class-members':
-      rulesJS['lines-between-class-members'],
+    '@typescript-eslint/lines-between-class-members': rulesJS['lines-between-class-members'],
 
     'no-extra-parens': ['off'],
     '@typescript-eslint/no-extra-parens': rulesJS['no-extra-parens'],
@@ -57,8 +56,7 @@ module.exports = {
     '@typescript-eslint/semi': rulesJS.semi,
 
     'space-before-function-paren': ['off'],
-    '@typescript-eslint/space-before-function-paren':
-      rulesJS['space-before-function-paren'],
+    '@typescript-eslint/space-before-function-paren': rulesJS['space-before-function-paren'],
 
     // }}}
   },

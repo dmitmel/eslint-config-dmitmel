@@ -8,10 +8,7 @@ module.exports = {
 
     '@typescript-eslint/await-thenable': ['error'],
 
-    '@typescript-eslint/no-floating-promises': [
-      'warn',
-      { ignoreVoid: true, ignoreIIFE: true },
-    ],
+    '@typescript-eslint/no-floating-promises': ['warn', { ignoreVoid: true, ignoreIIFE: true }],
 
     '@typescript-eslint/no-misused-promises': [
       'error',
@@ -39,10 +36,7 @@ module.exports = {
 
     '@typescript-eslint/prefer-string-starts-ends-with': ['warn'],
 
-    '@typescript-eslint/require-array-sort-compare': [
-      'error',
-      { ignoreStringArrays: true },
-    ],
+    '@typescript-eslint/require-array-sort-compare': ['error', { ignoreStringArrays: true }],
 
     // }}}
 

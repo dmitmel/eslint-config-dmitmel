@@ -72,8 +72,7 @@ module.exports = {
     '@typescript-eslint/init-declarations': rulesJS['init-declarations'],
 
     'no-dupe-class-members': ['off'],
-    '@typescript-eslint/no-dupe-class-members':
-      rulesJS['no-dupe-class-members'],
+    '@typescript-eslint/no-dupe-class-members': rulesJS['no-dupe-class-members'],
 
     'no-empty-function': ['off'],
     '@typescript-eslint/no-empty-function': rulesJS['no-empty-function'],
