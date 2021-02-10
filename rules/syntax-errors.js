@@ -71,6 +71,7 @@ module.exports = {
     // use of the same identifier for two items is an error
     // 'no-shadow': ['error', { builtinGlobals: true }], // two variables
     'no-shadow': ['off'], // turns out this rule is more annoying than helpful
+    'no-redeclare': ['off'], // same as with no-shadow
     'no-label-var': ['error'], // a variable and a label
 
     // }}}

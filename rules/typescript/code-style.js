@@ -17,10 +17,16 @@ module.exports = {
       },
     ],
 
+    // imports {{{
+
     // unfortunately I have to work with nw.js where it isn't possible to import
     // Node.js modules via the ES6 syntax
     '@typescript-eslint/no-require-imports': ['off'], // disallows the `require()` function entirely
     '@typescript-eslint/no-var-requires': ['off'], // only disallows using the returned value of `require()`
+
+    '@typescript-eslint/consistent-type-imports': ['off'],
+
+    // }}}
 
     // types and type annotations {{{
 
@@ -30,6 +36,8 @@ module.exports = {
     // https://www.typescriptlang.org/docs/handbook/advanced-types.html#interfaces-vs-type-aliases
     // https://pawelgrzybek.com/typescript-interface-vs-type/
     '@typescript-eslint/consistent-type-definitions': ['warn', 'interface'],
+
+    '@typescript-eslint/consistent-indexed-object-style': ['off'],
 
     // see notes in https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/typedef.md#when-not-to-use-it
     // basically this rule creates more friction than helps

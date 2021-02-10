@@ -54,6 +54,9 @@ module.exports = {
     'no-useless-constructor': ['off'],
     '@typescript-eslint/no-useless-constructor': rulesJS['no-useless-constructor'],
 
+    'no-duplicate-imports': ['off'],
+    '@typescript-eslint/no-duplicate-imports': rulesJS['no-duplicate-imports'],
+
     // }}}
   },
 };

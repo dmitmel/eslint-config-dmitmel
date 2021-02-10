@@ -88,8 +88,15 @@ module.exports = {
         ...rulesJS['no-use-before-define'][1],
         enums: rulesJS['no-use-before-define'][1].classes,
         typedefs: false,
+        ignoreTypeReferences: true,
       },
     ],
+
+    'no-redeclare': ['off'],
+    '@typescript-eslint/no-redeclare': rulesJS['no-redeclare'],
+
+    'no-shadow': ['off'],
+    '@typescript-eslint/no-shadow': rulesJS['no-shadow'],
 
     // }}}
   },

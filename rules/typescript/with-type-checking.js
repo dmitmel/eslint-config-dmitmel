@@ -81,24 +81,28 @@ module.exports = {
 
     '@typescript-eslint/prefer-nullish-coalescing': ['off'],
 
-    '@typescript-eslint/prefer-readonly': ['off'],
-
-    '@typescript-eslint/prefer-readonly-parameter-types': ['off'],
-
     '@typescript-eslint/restrict-plus-operands': ['error'],
 
     '@typescript-eslint/restrict-template-expressions': ['off'],
 
     '@typescript-eslint/unbound-method': ['off'],
 
-    // this is a formatting rule I suppose?
-    // 'dot-notation': ['off'],
-    '@typescript-eslint/dot-notation': ['off'],
+    'dot-notation': ['off'],
+    '@typescript-eslint/dot-notation': [
+      rulesRecommendations['dot-notation'][0],
+      {
+        ...rulesRecommendations['dot-notation'][1],
+        allowPrivateClassPropertyAccess: true,
+        allowProtectedClassPropertyAccess: true,
+      },
+    ],
 
     // TODO: I **definitely** would like to have the following rules enabled in
     // the future, but alas right now I don't have time to evaluate its effects
     // on a big codebase
     '@typescript-eslint/strict-boolean-expressions': ['off'],
     '@typescript-eslint/switch-exhaustiveness-check': ['off'],
+    '@typescript-eslint/prefer-readonly': ['off'],
+    '@typescript-eslint/prefer-readonly-parameter-types': ['off'],
   },
 };
