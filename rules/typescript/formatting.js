@@ -61,6 +61,12 @@ module.exports = {
     'comma-dangle': ['off'],
     '@typescript-eslint/comma-dangle': rulesJS['comma-dangle'],
 
+    'object-curly-spacing': ['off'],
+    '@typescript-eslint/object-curly-spacing': rulesJS['object-curly-spacing'],
+
+    'space-infix-ops': ['off'],
+    '@typescript-eslint/space-infix-ops': rulesJS['space-infix-ops'],
+
     // }}}
   },
 };

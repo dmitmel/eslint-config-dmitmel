@@ -35,6 +35,12 @@ module.exports = {
 
     '@typescript-eslint/unified-signatures': ['warn'],
 
+    '@typescript-eslint/sort-type-union-intersection-members': ['off'],
+
+    '@typescript-eslint/non-nullable-type-assertion-style': ['warn'],
+
+    '@typescript-eslint/no-unnecessary-type-constraint': ['warn'],
+
     // }}}
 
     // improved versions of the built-in rules {{{
