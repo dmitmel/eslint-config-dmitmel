@@ -104,5 +104,7 @@ module.exports = {
     '@typescript-eslint/switch-exhaustiveness-check': ['off'],
     '@typescript-eslint/prefer-readonly': ['off'],
     '@typescript-eslint/prefer-readonly-parameter-types': ['off'],
+
+    '@typescript-eslint/non-nullable-type-assertion-style': ['warn'],
   },
 };

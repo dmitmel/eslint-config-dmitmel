@@ -37,8 +37,6 @@ module.exports = {
 
     '@typescript-eslint/sort-type-union-intersection-members': ['off'],
 
-    '@typescript-eslint/non-nullable-type-assertion-style': ['warn'],
-
     '@typescript-eslint/no-unnecessary-type-constraint': ['warn'],
 
     // }}}
