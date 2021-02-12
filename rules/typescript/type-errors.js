@@ -40,7 +40,11 @@ module.exports = {
     // enhanced versions of the built-in rules {{{
 
     'no-loop-func': ['off'],
-    '@typescript-eslint/no-loop-func': rulesJS['no-loop-func'],
+    // disabled until it can use information about globals defined in
+    // typescript declarations
+    '@typescript-eslint/no-loop-func':
+      // rulesJS['no-loop-func'],
+      ['off'],
 
     // }}}
   },
