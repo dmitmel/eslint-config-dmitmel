@@ -25,8 +25,9 @@ module.exports = {
 
     // disallow `namespace` in non-declaration positions
     '@typescript-eslint/no-namespace': [
-      'error',
-      { allowDeclarations: true, allowDefinitionFiles: true },
+      'off',
+      // 'error',
+      // { allowDeclarations: true, allowDefinitionFiles: true },
     ],
     // disallows the `module` keyword in non-declarations
     '@typescript-eslint/prefer-namespace-keyword': ['error'],
