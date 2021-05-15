@@ -2,7 +2,9 @@
 
 > ESLint configuration for my projects
 
-When writing this config I generally tried to replicate the behavior of [Rust](https://www.rust-lang.org/)c's and [Clippy](https://github.com/rust-lang/rust-clippy)'s lints.
+When writing this config I generally tried to replicate the behavior of
+[Rust](https://www.rust-lang.org/)c's and [Clippy](https://github.com/rust-lang/rust-clippy)'s
+lints.
 
 ## Installation
 
