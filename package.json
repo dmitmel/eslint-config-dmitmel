@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-dmitmel",
-  "version": "7.2.0",
+  "version": "8.0.0",
   "description": "ESLint configuration for dmitmel's projects",
   "repository": "https://github.com/dmitmel/eslint-config-dmitmel",
   "bugs": "https://github.com/dmitmel/eslint-config-dmitmel/issues",
