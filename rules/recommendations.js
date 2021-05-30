@@ -85,7 +85,8 @@ module.exports = {
 
     // suggest function names everywhere except when they can't be inferred by
     // the language because this simplifies debugging
-    'func-names': ['warn', 'as-needed'],
+    // 'func-names': ['warn', 'as-needed'],
+    'func-names': ['off'],
     // prefer intended function declaration syntax over assigning to variables
     // (hello @ShubaShaba)
     'func-style': ['warn', 'declaration', { allowArrowFunctions: true }],
