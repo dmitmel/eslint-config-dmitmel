@@ -25,6 +25,6 @@
     "eslint-config-prettier": "*",
     "eslint-plugin-node": "*",
     "eslint-plugin-prettier": "*",
-    "prettier": "*"
+    "prettier": ">=2.4.0"
   }
 }
