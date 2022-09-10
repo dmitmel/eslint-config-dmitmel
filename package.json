@@ -18,10 +18,10 @@
     "node": ">=8.10.0"
   },
   "peerDependencies": {
-    "eslint": ">=6.3"
+    "eslint": ">=8.17.0"
   },
   "devDependencies": {
-    "eslint": ">=6.3",
+    "eslint": ">=8.17.0",
     "eslint-config-prettier": "*",
     "eslint-plugin-node": "*",
     "eslint-plugin-prettier": "*",

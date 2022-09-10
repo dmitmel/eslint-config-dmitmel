@@ -65,6 +65,7 @@ module.exports = {
         functions: false,
         classes: false,
         variables: true,
+        allowNamedExports: true,
       },
     ],
     'init-declarations': ['off'], // come on. this isn't Pascal
