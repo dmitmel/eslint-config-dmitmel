@@ -16,7 +16,6 @@ module.exports = {
     // performance and runtime environment support matter
     '@typescript-eslint/prefer-for-of': ['off'],
 
-    '@typescript-eslint/prefer-optional-chain': ['warn'],
     // while this isn't an error per se, IMO using a non-null assertion after an
     // optional chain (which is **designed** to help handle nullable values)
     // defeats the purpose of it and in practice is shooting yourself in the

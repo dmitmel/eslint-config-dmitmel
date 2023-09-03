@@ -10,6 +10,8 @@ module.exports = {
 
     '@typescript-eslint/no-type-aliases': ['off'],
 
+    '@typescript-eslint/no-duplicate-enum-values': ['off'],
+
     // banned ("illegal" in my opinion) syntax {{{
 
     '@typescript-eslint/consistent-type-assertions': [

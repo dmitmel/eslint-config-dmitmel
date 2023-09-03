@@ -24,6 +24,8 @@ module.exports = {
     'no-return-await': ['off'],
     '@typescript-eslint/return-await': rulesRecommendations['no-return-await'],
 
+    '@typescript-eslint/no-confusing-void-expression': ['warn', { ignoreArrowShorthand: true }],
+
     // }}}
 
     // standard library (haha funny) suggestions {{{
@@ -56,16 +58,12 @@ module.exports = {
 
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': ['warn'],
 
-    // 'no-constant-condition': ['off'],
-    // TODO: will enable when https://github.com/typescript-eslint/typescript-eslint/issues/2113 is resolved
+    'no-constant-condition': ['off'],
     '@typescript-eslint/no-unnecessary-condition': [
-      'off',
-      // rulesRecommendations['no-constant-condition'][0],
-      // {
-      //   allowConstantLoopConditions: !rulesRecommendations[
-      //     'no-constant-condition'
-      //   ][1].checkLoops,
-      // },
+      rulesRecommendations['no-constant-condition'][0],
+      {
+        allowConstantLoopConditions: !rulesRecommendations['no-constant-condition'][1].checkLoops,
+      },
     ],
 
     '@typescript-eslint/no-unnecessary-qualifier': ['off'],
@@ -74,12 +72,16 @@ module.exports = {
 
     '@typescript-eslint/no-unnecessary-type-assertion': ['warn'],
 
+    // same issue, e.g. `void | unknown` is rejected by this rule
+    '@typescript-eslint/no-redundant-type-constituents': ['off'],
+
     '@typescript-eslint/no-unsafe-assignment': ['off'],
     '@typescript-eslint/no-unsafe-call': ['off'],
     '@typescript-eslint/no-unsafe-member-access': ['off'],
     '@typescript-eslint/no-unsafe-return': ['off'],
 
     '@typescript-eslint/prefer-nullish-coalescing': ['off'],
+    '@typescript-eslint/prefer-optional-chain': ['warn'],
 
     '@typescript-eslint/restrict-plus-operands': ['error'],
 

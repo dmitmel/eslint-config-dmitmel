@@ -9,7 +9,8 @@ module.exports = {
     // , then find and disable appropriate ESLint rules, so I guess I'll just go
     // along with including this config from the TS plugin. btw, `ts(xxxx)`
     // comments there refer to the compiler errors from the aforementioned file.
-    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/strict',
+    'plugin:@typescript-eslint/stylistic',
 
     '../rules/typescript/syntax-errors',
     '../rules/typescript/type-errors',
