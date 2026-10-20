@@ -1,7 +1,3 @@
 module.exports = {
-  extends: ['plugin:node/recommended'],
-
-  rules: {
-    'node/shebang': 'off',
-  },
+  extends: ['plugin:n/recommended'],
 };
