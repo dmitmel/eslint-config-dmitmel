@@ -40,16 +40,16 @@ module.exports = {
       prettierConfig.trailingComma === 'none'
         ? ['warn', 'never']
         : prettierConfig.trailingComma === 'es5' || prettierConfig.trailingComma === 'all'
-        ? ['warn', 'always-multiline']
-        : ['off'],
+          ? ['warn', 'always-multiline']
+          : ['off'],
 
     'object-curly-spacing': ['warn', prettierConfig.bracketSpacing ? 'always' : 'never'],
     'arrow-parens':
       prettierConfig.arrowParens === 'avoid'
         ? ['warn', 'as-needed']
         : prettierConfig.arrowParens === 'always'
-        ? ['warn', 'always']
-        : ['off'],
+          ? ['warn', 'always']
+          : ['off'],
 
     'array-bracket-newline': ['warn', 'consistent'],
     'array-bracket-spacing': ['warn', 'never'],
